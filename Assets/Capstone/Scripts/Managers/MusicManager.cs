@@ -23,6 +23,7 @@ namespace InterDigital.CMU
             {
                 AudioClip[] arr = PostProcessingManager.Instance.FetchConfig(emotion).audio;
                 source.clip = arr[Random.Range(0, arr.Length - 1)];
+                source.Play();
 
                 DOTween.To(() => volume, x => volume = x, 1f, transitionDuration).OnUpdate(SetVolume);
             });

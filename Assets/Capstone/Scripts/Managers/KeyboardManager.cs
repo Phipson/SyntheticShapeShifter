@@ -10,17 +10,21 @@ namespace InterDigital.CMU
         void Update()
         {
             // FOR POST PROCESSING AND COLOR GRADING
-            if (Input.GetKeyDown(KeyCode.Alpha0))
+            if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 PostProcessingManager.Instance.SetEmotion(Emotion.Neutral);
             }
-            else if (Input.GetKeyDown(KeyCode.Alpha1))
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 PostProcessingManager.Instance.SetEmotion(Emotion.Happy);
             }
-            else if (Input.GetKeyDown(KeyCode.Alpha2))
+            else if (Input.GetKeyDown(KeyCode.Alpha3))
             {
                 PostProcessingManager.Instance.SetEmotion(Emotion.Scared);
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha4))
+            {
+                PostProcessingManager.Instance.SetEmotion(Emotion.Sad);
             }
 
             // FOR MUSIC
@@ -35,6 +39,10 @@ namespace InterDigital.CMU
             else if (Input.GetKeyDown(KeyCode.E))
             {
                 MusicManager.Instance.TransitionNewAudio(Emotion.Scared);
+            }
+            else if (Input.GetKeyDown(KeyCode.R))
+            {
+                MusicManager.Instance.TransitionNewAudio(Emotion.Sad);
             }
         }
     }

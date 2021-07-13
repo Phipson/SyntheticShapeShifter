@@ -29,6 +29,9 @@ namespace InterDigital.CMU
         [Header("Emotion Volume Configurations")]
         public EmotionConfig[] Config;
 
+        [Header("Scene Change Configurations")]
+        public float FadeDuration = 0.15f;
+
         Dictionary<Emotion, EmotionConfig> configMap = new Dictionary<Emotion, EmotionConfig>();
         EmotionConfig masterConfig;
         PostProcessVolume currentVolume, targetVolume;
@@ -70,6 +73,24 @@ namespace InterDigital.CMU
 
             if (currentVolume != null)
                 currentVolume.weight = 1 - volumeWeightLerp;
+        }
+
+        ColorGrading cg;
+        float fadeLerp = 0f;
+        float maxFade = -35f;
+        void Fade()
+        {
+            masterConfig.volume.profile.TryGetSettings(out cg);
+            cg.postExposure.value = fadeLerp * maxFade;
+        }
+
+        public void FadeToBlack(TweenCallback completedFade)
+        {
+            DOTween.To(() => fadeLerp, x => fadeLerp = x, 1f, FadeDuration).OnUpdate(Fade).OnComplete(() =>
+            {
+                completedFade?.Invoke();
+                DOTween.To(() => fadeLerp, x => fadeLerp = x, 0f, FadeDuration).OnUpdate(Fade);
+            });
         }
     }
 }
