@@ -21,6 +21,7 @@ namespace InterDigital.CMU
     {
         public Emotion emotion;
         public PostProcessVolume volume;
+        public AudioClip[] audio; 
     }
 
     public class PostProcessingManager : Singleton<PostProcessingManager>
@@ -54,8 +55,11 @@ namespace InterDigital.CMU
                 currentVolume = targetVolume;
                 volumeWeightLerp = 0f;
             });
+        }
 
-
+        public EmotionConfig FetchConfig(Emotion emotion)
+        {
+            return configMap[emotion];
         }
 
         float volumeWeightLerp = 0f;
