@@ -14,6 +14,7 @@ namespace InterDigital.CMU
         public GameObject[] FallenTrunks;
         public GameObject[] FallenBranches;
         public GameObject[] Mushrooms;
+        public GameObject[] House;
 
         void Start()
         {
@@ -58,6 +59,9 @@ namespace InterDigital.CMU
             FallenBranches[1].SetActive(false);
             Mushrooms[0].SetActive(true);
             Mushrooms[1].SetActive(false);
+            House[0].SetActive(true);
+            House[1].SetActive(false);
+            House[2].SetActive(false);
         }
         void Setting2()
         {
@@ -73,6 +77,9 @@ namespace InterDigital.CMU
             FallenBranches[1].SetActive(false);
             Mushrooms[0].SetActive(true);
             Mushrooms[1].SetActive(false);
+            House[0].SetActive(false);
+            House[1].SetActive(true);
+            House[2].SetActive(false);
         }
         void Setting3()
         {
@@ -88,6 +95,9 @@ namespace InterDigital.CMU
             FallenBranches[0].SetActive(false);
             Mushrooms[1].SetActive(true);
             Mushrooms[0].SetActive(false);
+            House[0].SetActive(false);
+            House[1].SetActive(false);
+            House[2].SetActive(true);
         }
     }
 }
