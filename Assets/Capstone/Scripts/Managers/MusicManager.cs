@@ -25,7 +25,7 @@ namespace InterDigital.CMU
                 source.clip = arr[Random.Range(0, arr.Length - 1)];
                 source.Play();
 
-                DOTween.To(() => volume, x => volume = x, 1f, transitionDuration).OnUpdate(SetVolume);
+                DOTween.To(() => volume, x => volume = x, 0.1f, transitionDuration).OnUpdate(SetVolume);
             });
             
         }

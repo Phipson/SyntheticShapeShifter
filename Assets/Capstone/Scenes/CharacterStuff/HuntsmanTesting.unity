@@ -290,6 +290,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     - target: {fileID: -7768697270745631483, guid: 654a0ef69cb37ba489af7255653f17da,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -320,10 +321,27 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e272a68b9e9bb9d459561b1eff029f0c, type: 2}
+=======
+    - target: {fileID: -8553317955579511445, guid: 654a0ef69cb37ba489af7255653f17da,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8ca45b51d8318074ba95738e62a97939, type: 2}
+    - target: {fileID: -6989637582007489511, guid: 654a0ef69cb37ba489af7255653f17da,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5ace9afcee10df84fb9a0c6124206ccd, type: 2}
+    - target: {fileID: -2022501662684848741, guid: 654a0ef69cb37ba489af7255653f17da,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8ca45b51d8318074ba95738e62a97939, type: 2}
+>>>>>>> Stashed changes
     - target: {fileID: 919132149155446097, guid: 654a0ef69cb37ba489af7255653f17da,
         type: 3}
       propertyPath: m_Name
-      value: Huntsman@idle
+      value: Huntsman
       objectReference: {fileID: 0}
     - target: {fileID: 2392658086560963977, guid: 654a0ef69cb37ba489af7255653f17da,
         type: 3}
